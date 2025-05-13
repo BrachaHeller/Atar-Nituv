@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Motzarim from './components/Motzarim';
 
 function App() {
- 
+  const [motzarim, setmotzarim]= useState ([
+  {  id: 1, code:100, name: "mekupelet", price: 4, img: 'deafult.jpg' }
+  ])
 
 
 
@@ -20,6 +23,11 @@ function App() {
            <div className=''></div>
 
 
+      </div>
+       {/* קומפוננטה מוצרים - המוצרים שנמצאים במכונה*/}
+      <div className='motzarim'>
+        <Motzarim list={motzarim} />
+        {/* Motzarim תעביר את המוצרים לקומפוננטה עם השם list  */}
       </div>
 
 
